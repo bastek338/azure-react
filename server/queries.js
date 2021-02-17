@@ -4,7 +4,7 @@ const Hero = require('./models/hero');
 function getHeroes(req, res) {
     Hero.model.find({}).exec()
     .then(heroes => {
-        res.setHeader('Content-Type', 'application/json')
+            res.setHeader('Content-Type', 'application/json')
          return res.json(heroes)
     })
     .catch(err => {
